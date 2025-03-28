@@ -42,4 +42,8 @@ compinit
 # Use a completion menu.
 zstyle ':completion:*' menu select
 
+# kitty
+bindkey "\e[1;3D" backward-word # ⌥←
+bindkey "\e[1;3C" forward-word # ⌥→
+
 source <(fzf --zsh)
