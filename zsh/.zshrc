@@ -13,9 +13,6 @@ setopt SHARE_HISTORY
 # Ignore duplicated commands history list.
 setopt hist_ignore_dups
 
-# Lazygit settings
-export XDG_CONFIG_HOME="$HOME/.config"
-
 # Load nvm and bash completions.
 export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
