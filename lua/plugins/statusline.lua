@@ -46,11 +46,18 @@ return {
           { "filetype", icon_only = true, separator = "", padding = { left = 1, right = 0 } },
           { LazyVim.lualine.pretty_path() },
         },
-        lualine_w = {
-          { "lsp_status", separator = "", padding = { left = 0, right = 1 } },
-        },
         lualine_x = {
           Snacks.profiler.status(),
+          {
+            function()
+              ENCODING = vim.o.fileencoding
+              if ENCODING == "" then
+                return vim.bo.fileformat .. "::" .. vim.bo.filetype
+              else
+                return ENCODING .. "::" .. vim.bo.fileformat .. "::" .. vim.bo.filetype
+              end
+            end,
+          },
           -- stylua: ignore
           {
             function() return require("noice").api.status.command.get() end,
@@ -127,7 +134,7 @@ return {
       })
       table.insert(
         opts.sections.lualine_x,
-        2,
+        3,
         LazyVim.lualine.status(LazyVim.config.icons.kinds.Copilot, function()
           local clients = package.loaded["copilot"] and LazyVim.lsp.get_clients({ name = "copilot", bufnr = 0 }) or {}
           if #clients > 0 then
