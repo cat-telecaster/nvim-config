@@ -1,32 +1,23 @@
 return {
-  { "folke/tokyonight.nvim" },
-  { "sainnhe/gruvbox-material" },
-  { "sainnhe/sonokai" },
-  { "rebelot/kanagawa.nvim" },
-  { "rose-pine/neovim" },
   {
     "blazkowolf/gruber-darker.nvim",
     opts = {
       bold = false,
     },
   },
-  {
-    "zenbones-theme/zenbones.nvim",
-    dependencies = "rktjmp/lush.nvim",
-    lazy = false,
-    priority = 1000,
-  },
+  { "scottmckendry/cyberdream.nvim" },
+  { "folke/tokyonight.nvim" },
+  { "eldritch-theme/eldritch.nvim" },
   { "ellisonleao/gruvbox.nvim" },
-  {
-    "rose-pine/neovim",
-    name = "rose-pine",
-  },
-  {
-    "tjdevries/colorbuddy.nvim",
-  },
-  {
-    "gmr458/cold.nvim",
-  },
+  { "gmr458/cold.nvim" },
+  { "jnurmine/Zenburn" },
+  { "neanias/everforest-nvim" },
+  { "rebelot/kanagawa.nvim" },
+  { "rose-pine/neovim" },
+  { "sainnhe/gruvbox-material" },
+  { "sainnhe/sonokai" },
+  { "shaunsingh/nord.nvim" },
+  { "tjdevries/colorbuddy.nvim" },
   {
     "vague2k/vague.nvim",
     config = function()
@@ -75,7 +66,10 @@ return {
     end,
   },
   {
-    "jnurmine/Zenburn",
+    "zenbones-theme/zenbones.nvim",
+    dependencies = "rktjmp/lush.nvim",
+    lazy = false,
+    priority = 1000,
   },
   {
     "LazyVim/LazyVim",
