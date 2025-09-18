@@ -21,7 +21,16 @@ return {
     },
     config = function()
       require("copilot").setup({
-        copilot_model = "gpt-4o-copilot",
+        copilot_model = "gpt-41-copilot",
+        server_opts_overrides = {
+          trace = "verbose",
+          settings = {
+            advanced = {
+              listCount = 10,
+              inlineSuggestCount = 3,
+            },
+          },
+        },
       })
     end,
   },
