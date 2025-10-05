@@ -144,7 +144,7 @@ return {
                   require("copilot.command").disable()
                 end
               end,
-            }):map("<leader>ac")
+            }):map("<leader>al")
           end
           --
         end,
