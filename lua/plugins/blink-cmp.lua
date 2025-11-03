@@ -1,8 +1,19 @@
 return {
   "saghen/blink.cmp",
   optional = true,
-  dependencies = { "giuxtaposition/blink-cmp-copilot" },
+  dependencies = { "fang2hou/blink-copilot" },
   opts = {
+    sources = {
+      default = { "copilot" },
+      providers = {
+        copilot = {
+          name = "copilot",
+          module = "blink-copilot",
+          score_offset = 100,
+          async = true,
+        },
+      },
+    },
     keymap = {
       ["<Tab>"] = {
         "snippet_forward",
@@ -12,17 +23,18 @@ return {
         "fallback",
       },
     },
-    --    sources = {
-    --      default = { "copilot" },
-    --      providers = {
-    --        copilot = {
-    --          name = "copilot",
-    --          module = "blink-cmp-copilot",
-    --          kind = "Copilot",
-    --          score_offset = 100,
-    --          async = true,
-    --        },
-    --      },
-    --    },
+  },
+  {
+    "zbirenbaum/copilot.lua",
+    enabled = false,
+  },
+  {
+    "neovim/nvim-lspconfig",
+    opts = {
+      servers = {
+        -- LazyVim Extra disabled it for copilot.lua
+        copilot = { enabled = true },
+      },
+    },
   },
 }
