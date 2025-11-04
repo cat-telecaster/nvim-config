@@ -12,6 +12,7 @@ return {
     config = function()
       require("image").setup({
         backend = "kitty",
+        kitty_method = "normal",
         integrations = {
           markdown = {
             only_render_image_at_cursor = true,
