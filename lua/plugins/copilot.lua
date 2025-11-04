@@ -9,29 +9,19 @@ return {
         enabled = true,
         auto_trigger = true,
         keymap = {
-          accept = false,
           accept_word = "<M-w>",
           accept_line = "<M-l>",
           next = "<M-]>",
           prev = "<M-[>",
+          accept = "<Tab>",
           dismiss = "/",
         },
       },
-      filetypes = { markdown = true },
+      filetypes = {
+        ["*"] = true,
+        markdown = true,
+        go = true,
+      },
     },
-    config = function()
-      require("copilot").setup({
-        copilot_model = "gpt-41-copilot",
-        server_opts_overrides = {
-          trace = "verbose",
-          settings = {
-            advanced = {
-              listCount = 10,
-              inlineSuggestCount = 3,
-            },
-          },
-        },
-      })
-    end,
   },
 }
