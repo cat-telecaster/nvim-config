@@ -53,5 +53,10 @@ return {
       function() require("sidekick.cli").toggle({ name = "copilot", focus = true }) end,
       desc = "Sidekick Toggle Copilot",
     },
+    {
+      "<leader>an",
+      function() require("sidekick.nes").toggle() end,
+      desc = "Sidekick Toggle NES",
+    }
   },
 }

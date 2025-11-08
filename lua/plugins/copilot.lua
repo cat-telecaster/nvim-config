@@ -13,7 +13,7 @@ return {
           accept_line = "<M-l>",
           next = "<M-]>",
           prev = "<M-[>",
-          accept = "<Tab>",
+          accept = "<M-Tab>",
           dismiss = "/",
         },
       },
