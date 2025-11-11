@@ -14,6 +14,14 @@ return {
             },
             trash = true,
             replace_netrw = true,
+            win = {
+              list = {
+                wo = {
+                  number = true,
+                  relativenumber = true,
+                },
+              },
+            },
           },
         },
       },
