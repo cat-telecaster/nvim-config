@@ -23,7 +23,7 @@ return {
     config = function()
       require("vague").setup({
         -- optional configuration here
-        -- transparent = true,
+        transparent = true,
         style = {
           -- "none" is the same thing as default. But "italic" and "bold" are also valid options
           boolean = "none",
@@ -52,15 +52,15 @@ return {
           builtin_variables = "none",
         },
         colors = {
-          -- func = "#bc96b0",
-          -- keyword = "#787bab",
-          -- -- string = "#d4bd98",
+          func = "#05f2f2",
+          keyword = "#1d96c5",
+          -- string = "#d4bd98",
           -- string = "#8a739a",
-          -- -- string = "#f2e6ff",
-          -- -- number = "#f2e6ff",
-          -- -- string = "#d8d5b1",
-          -- number = "#8f729e",
-          -- -- type = "#dcaed7",
+          -- string = "#f2e6ff",
+          -- number = "#f2e6ff",
+          string = "#e6241c",
+          number = "#fdb800",
+          type = "#cecccc",
         },
       })
     end,
