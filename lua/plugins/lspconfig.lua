@@ -5,6 +5,17 @@ return {
       inlay_hints = {
         enabled = true,
       },
+      servers = {
+        basedpyright = {
+          settings = {
+            basedpyright = {
+              analysis = {
+                typeCheckingMode = "standard",
+              },
+            },
+          },
+        },
+      },
     },
   },
 }
